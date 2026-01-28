@@ -1,0 +1,13 @@
+# FastAPI Backend Dependencies
+# Add these to your existing requirements.txt in FHIR_Sandbox repo
+
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+pydantic==2.5.0
+python-dotenv==1.0.0
+
+# Keep all your existing dependencies as well:
+# streamlit
+# chromadb
+# etc.

@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Environment files
+.env.local
+.env*.local
+.env.production
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+coverage/
+.nyc_output/
+
+# Python (for backend_docs reference)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Misc
+.next/
+.vercel
+*.tsbuildinfo
