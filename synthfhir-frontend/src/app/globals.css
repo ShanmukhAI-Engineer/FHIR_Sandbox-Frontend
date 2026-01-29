@@ -5,37 +5,52 @@
 @layer base {
   :root {
     /* Purple Healthcare Theme - Professional & Premium */
-    --color-primary: 147 51 234;        /* Purple-600 */
-    --color-primary-dark: 126 34 206;   /* Purple-700 */
-    --color-primary-light: 168 85 247;  /* Purple-500 */
-    --color-accent: 192 132 252;        /* Purple-400 */
-    
+    --color-primary: 147 51 234;
+    /* Purple-600 */
+    --color-primary-dark: 126 34 206;
+    /* Purple-700 */
+    --color-primary-light: 168 85 247;
+    /* Purple-500 */
+    --color-accent: 192 132 252;
+    /* Purple-400 */
+
     /* Backgrounds */
-    --color-bg-dark: 15 23 42;          /* Slate-900 */
-    --color-bg-card: 30 41 59;          /* Slate-800 */
-    --color-bg-hover: 51 65 85;         /* Slate-700 */
-    
+    --color-bg-dark: 15 23 42;
+    /* Slate-900 */
+    --color-bg-card: 30 41 59;
+    /* Slate-800 */
+    --color-bg-hover: 51 65 85;
+    /* Slate-700 */
+
     /* Text Colors */
-    --color-text: 241 245 249;          /* Slate-100 */
-    --color-text-muted: 148 163 184;    /* Slate-400 */
-    --color-text-dark: 15 23 42;        /* Slate-900 */
-    
+    --color-text: 241 245 249;
+    /* Slate-100 */
+    --color-text-muted: 148 163 184;
+    /* Slate-400 */
+    --color-text-dark: 15 23 42;
+    /* Slate-900 */
+
     /* Status Colors */
-    --color-success: 34 197 94;         /* Green-500 */
-    --color-warning: 234 179 8;         /* Yellow-500 */
-    --color-error: 239 68 68;           /* Red-500 */
-    --color-info: 59 130 246;           /* Blue-500 */
-    
+    --color-success: 34 197 94;
+    /* Green-500 */
+    --color-warning: 234 179 8;
+    /* Yellow-500 */
+    --color-error: 239 68 68;
+    /* Red-500 */
+    --color-info: 59 130 246;
+    /* Blue-500 */
+
     /* Borders */
-    --color-border: 71 85 105;          /* Slate-600 */
-    
+    --color-border: 71 85 105;
+    /* Slate-600 */
+
     /* Glassmorphism */
     --glass-bg: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(168, 85, 247, 0.2);
   }
 
   * {
-    @apply border-border;
+    border-color: rgb(var(--color-border));
   }
 
   body {
@@ -43,7 +58,12 @@
     min-height: 100vh;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 
@@ -61,6 +81,7 @@
 }
 
 @layer components {
+
   /* Glass Card */
   .glass-card {
     @apply backdrop-blur-lg bg-[var(--glass-bg)] border border-[var(--glass-border)] rounded-xl shadow-lg;
@@ -68,24 +89,17 @@
 
   /* Primary Button */
   .btn-primary {
-    @apply px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-primary))] to-[rgb(var(--color-primary-dark))] 
-           text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-500/50 
-           transition-all duration-300 hover:scale-105 active:scale-95;
+    @apply px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-primary))] to-[rgb(var(--color-primary-dark))] text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 active:scale-95;
   }
 
   /* Secondary Button */
   .btn-secondary {
-    @apply px-6 py-3 bg-[rgb(var(--color-bg-card))] text-[rgb(var(--color-text))] 
-           font-semibold rounded-lg border border-[rgb(var(--color-border))] 
-           hover:bg-[rgb(var(--color-bg-hover))] transition-all duration-200;
+    @apply px-6 py-3 bg-[rgb(var(--color-bg-card))] text-[rgb(var(--color-text))] font-semibold rounded-lg border border-[rgb(var(--color-border))] hover:bg-[rgb(var(--color-bg-hover))] transition-all duration-200;
   }
 
   /* Input Field */
   .input-field {
-    @apply w-full px-4 py-3 bg-[rgb(var(--color-bg-card))] text-[rgb(var(--color-text))] 
-           border border-[rgb(var(--color-border))] rounded-lg 
-           focus:outline-none focus:ring-2 focus:ring-[rgb(var(--color-primary))] 
-           transition-all duration-200 placeholder:text-[rgb(var(--color-text-muted))];
+    @apply w-full px-4 py-3 bg-[rgb(var(--color-bg-card))] text-[rgb(var(--color-text))] border border-[rgb(var(--color-border))] rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgb(var(--color-primary))] transition-all duration-200 placeholder:text-[rgb(var(--color-text-muted))];
   }
 
   /* Card */
@@ -99,18 +113,15 @@
   }
 
   .badge-primary {
-    @apply badge bg-[rgb(var(--color-primary))]/20 text-[rgb(var(--color-accent))] 
-           border border-[rgb(var(--color-primary))]/30;
+    @apply badge bg-[rgb(var(--color-primary))]/20 text-[rgb(var(--color-accent))] border border-[rgb(var(--color-primary))]/30;
   }
 
   .badge-success {
-    @apply badge bg-[rgb(var(--color-success))]/20 text-green-400 
-           border border-[rgb(var(--color-success))]/30;
+    @apply badge bg-[rgb(var(--color-success))]/20 text-green-400 border border-[rgb(var(--color-success))]/30;
   }
 
   .badge-error {
-    @apply badge bg-[rgb(var(--color-error))]/20 text-red-400 
-           border border-[rgb(var(--color-error))]/30;
+    @apply badge bg-[rgb(var(--color-error))]/20 text-red-400 border border-[rgb(var(--color-error))]/30;
   }
 
   /* Hover Animation */
@@ -120,6 +131,7 @@
 }
 
 @layer utilities {
+
   /* Scrollbar Styling */
   .scrollbar-thin::-webkit-scrollbar {
     width: 8px;
